@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 
-@Repository
+
 public class MemoryMemberRepository implements MemberRepository {
 
     // 실무에서는 동시성 문제 때문에 공유되는 변수에는 ^%&%^& 를 사용해야 한다고 하는데 못들음..
