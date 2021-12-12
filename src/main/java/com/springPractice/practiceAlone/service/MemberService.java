@@ -3,14 +3,19 @@ package com.springPractice.practiceAlone.service;
 import com.springPractice.practiceAlone.domain.Member;
 import com.springPractice.practiceAlone.repositroy.MemberRepository;
 import com.springPractice.practiceAlone.repositroy.MemoryMemberRepository;
+dimport org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
