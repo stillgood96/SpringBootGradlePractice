@@ -1,6 +1,7 @@
 package com.springPractice.practiceAlone;
 
 import com.springPractice.practiceAlone.repositroy.JdbcMemberRepository;
+import com.springPractice.practiceAlone.repositroy.JdbcTemplateMemberRepository;
 import com.springPractice.practiceAlone.repositroy.MemberRepository;
 import com.springPractice.practiceAlone.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ public class SpringConfig {
     public MemberRepository memberRepository() {
 
         //return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
